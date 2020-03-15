@@ -1,2 +1,2 @@
-# serglehmann.github.io
+# Сергей Лейман
 Glo Academy - Домашние задания
