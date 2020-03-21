@@ -219,7 +219,7 @@ formSearch.addEventListener('submit', (event) => {
             '&destination=' + formData.to +
             '&one_way=true&token=' + API_KEY;*/
 
-        getData(calendar + requestData, (response) => {   //(proxy + calendar + requestData, (response) =>
+        getData(proxy + calendar + requestData, (response) => {   //(proxy + calendar + requestData, (response) =>
             renderCheap(response, formData.when);
             }, 
             (error) => {
