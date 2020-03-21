@@ -8,3 +8,6 @@ input {
     position: relative;
     z-index: 1;
 }
+.wrapper {
+    margin-top: 50px;
+}
