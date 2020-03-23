@@ -12,4 +12,7 @@ Glo Academy - Домашние задания
 [Модуль 5 Практика 1](https://serglehmann.github.io/lesson_m5_pr1/index.html) - "Подготовка файлов Верстка шапки сайта"
 
 [Воркшоп JS](https://serglehmann.github.io/aviasales_js_workshop/index.html) - "Aviasales"
+
+[Модуль 5 Урок 14](https://serglehmann.github.io/fonts-viewer/index.html) - "Подключение шрифтов"
+
   
