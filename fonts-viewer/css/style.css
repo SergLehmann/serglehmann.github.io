@@ -1,34 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @font-face {
 	font-family: 'Bebas Neue';
-	src: url(../Fonts/Bebas/BebasNeue-Regular.eot);
-	src: url(../Fonts/Bebas/BebasNeue-Regular.eot?#iefix) format('embedded-opentype'),
-		url(../Fonts/Bebas/BebasNeue-Regular.woff2) format('woff2'),
-		url(../Fonts/Bebas/BebasNeue-Regular.woff) format('woff'),
-		url(../Fonts/Bebas/BebasNeue-Regular.ttf) format('truetype'),
-		url(../Fonts/Bebas/BebasNeue-Regular.svg#BebasNeue-Regular) format('svg');
+	src: url('../Fonts/Bebas/BebasNeue-Regular.eot');
+	src: url('../Fonts/Bebas/BebasNeue-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../Fonts/Bebas/BebasNeue-Regular.woff2') format('woff2'),
+		url('../Fonts/Bebas/BebasNeue-Regular.woff') format('woff'),
+		url('../Fonts/Bebas/BebasNeue-Regular.ttf') format('truetype'),
+		url('../Fonts/Bebas/BebasNeue-Regular.svg#BebasNeue-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Lato';
-	src: url(../Fonts/Lato/Lato-Regular.eot);
-	src: url(../Fonts/Lato/Lato-Regular.eot?#iefix) format('embedded-opentype'),
-		url(../Fonts/Lato/Lato-Regular.woff2) format('woff2'),
-		url(../Fonts/Lato/Lato-Regular.woff) format('woff'),
-		url(../Fonts/Lato/Lato-Regular.ttf) format('truetype'),
-		url(../Fonts/Lato/Lato-Regular.svg#Lato-Regular) format('svg');
+	src: url('../Fonts/Lato/Lato-Regular.eot');
+	src: url('../Fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../Fonts/Lato/Lato-Regular.woff2') format('woff2'),
+		url('../Fonts/Lato/Lato-Regular.woff') format('woff'),
+		url('../Fonts/Lato/Lato-Regular.ttf') format('truetype'),
+		url('../Fonts/Lato/Lato-Regular.svg#Lato-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Lobster';
-	src: url(../Fonts/Lobster/Lobster.eot);
-	src: url(../Fonts/Lobster/Lobster.eot?#iefix) format('embedded-opentype'),
-		url(../Fonts/Lobster/Lobster.woff2) format('woff2'),
-		url(../Fonts/Lobster/Lobster.woff) format('woff'),
-		url(../Fonts/Lobster/Lobster.ttf) format('truetype'),
-		url(../Fonts/Lobster/Lobster.svg#Lobster) format('svg');
+	src: url('../Fonts/Lobster/Lobster.eot');
+	src: url('../Fonts/Lobster/Lobster.eot?#iefix') format('embedded-opentype'),
+		url('../Fonts/Lobster/Lobster.woff2') format('woff2'),
+		url('../Fonts/Lobster/Lobster.woff') format('woff'),
+		url('../Fonts/Lobster/Lobster.ttf') format('truetype'),
+		url('../Fonts/Lobster/Lobster.svg#Lobster') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
