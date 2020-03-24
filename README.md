@@ -15,4 +15,6 @@ Glo Academy - Домашние задания
 
 [Модуль 5 Урок 14](https://serglehmann.github.io/fonts-viewer/index.html) - "Подключение шрифтов"
 
+[Интенсив](https://serglehmann.github.io/Batman/index.html) - "Интенсив по вёрстке | "Бэтмен"" 
+
   
