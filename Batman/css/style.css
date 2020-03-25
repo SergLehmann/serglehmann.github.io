@@ -154,7 +154,7 @@ body {
     justify-content: space-between;
     background: #FFFFFF;
     border-radius: 3px;
-    padding: 43px 50px;
+    padding: 59px 50px;
 }
 .cover {
     margin-top: -80px;
@@ -189,7 +189,7 @@ body {
 }
 .full-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
 .tabs-item {
     margin-right: 70px;
