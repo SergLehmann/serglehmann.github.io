@@ -194,7 +194,7 @@ body {
 .tabs-item {
     margin-right: 70px;
 }
-.menu-tabs {
+.menu-tabs {    
     font-size: 18px;
     line-height: 21px;
     color: #000000;
@@ -204,3 +204,11 @@ body {
 .menu-tabs-active {
     color: #FF8F27;
 }
+.full-content {
+    margin-top: 40px;
+}
+.text {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
