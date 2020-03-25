@@ -17,4 +17,6 @@ Glo Academy - Домашние задания
 
 [Интенсив](https://serglehmann.github.io/Batman/index.html) - "Интенсив по вёрстке | "Бэтмен"" 
 
+[Практика](https://serglehmann.github.io/myProject/index.html) - "Подключение шрифтов. Верстка первого экрана."  
+
   
