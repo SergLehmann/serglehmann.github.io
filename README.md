@@ -13,7 +13,7 @@ Glo Academy - Домашние задания
 
 [Модуль 5 Урок 14](https://serglehmann.github.io/fonts-viewer/index.html) - "Подключение шрифтов"
 
-[Интенсив](https://serglehmann.github.io/the_witche/index.html) - "Интенсив по вёрстке | "Ведьмак"" 
+[Интенсив](https://serglehmann.github.io/the_witcher/index.html) - "Интенсив по вёрстке | "Ведьмак"" 
 
 [Воркшоп JS](https://serglehmann.github.io/aviasales_js_workshop/index.html) - "Aviasales"
 
