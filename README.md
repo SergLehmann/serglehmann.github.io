@@ -13,11 +13,13 @@ Glo Academy - Домашние задания
 
 [Модуль 5 Урок 14](https://serglehmann.github.io/fonts-viewer/index.html) - "Подключение шрифтов"
 
-[Интенсив](https://serglehmann.github.io/BatleShip/index.html) - "BatleShip" 
+[Интенсив](https://serglehmann.github.io/js_calc/index.html) - "Интенсив по js | "js_calc"" 
+
+[Интенсив](https://serglehmann.github.io/BatleShip/index.html) - "Интенсив по js | "BatleShip"" 
 
 [Интенсив](https://serglehmann.github.io/the_witcher/index.html) - "Интенсив по вёрстке | "Ведьмак"" 
 
-[Воркшоп JS](https://serglehmann.github.io/aviasales_js_workshop/index.html) - "Aviasales"
+[Воркшоп JS](https://serglehmann.github.io/aviasales_js_workshop/index.html) - "Воркшоп по js | "Aviasales""
 
 [Интенсив](https://serglehmann.github.io/Batman/index.html) - "Интенсив по вёрстке | "Бэтмен"" 
 
