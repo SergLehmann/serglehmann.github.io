@@ -199,7 +199,11 @@ body {
     justify-content: space-between;    
 }
 .tabs-item {
+    display: none;
     margin-right: 70px;
+}
+.visible {
+    display: block;
 }
 .menu-tabs {    
     font-size: 18px;
