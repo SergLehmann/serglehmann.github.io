@@ -25,4 +25,6 @@ Glo Academy - Домашние задания
 
 [Практика](https://serglehmann.github.io/myProject/index.html) - "Подключение шрифтов. Верстка первого экрана."  
 
+[Практика](https://serglehmann.github.io/project_m5_u15/index.html) - "Псевдоклассы и псевдоэлементы."
+
   
