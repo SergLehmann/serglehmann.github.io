@@ -23,7 +23,7 @@ Glo Academy - Домашние задания
 
 [Интенсив](https://serglehmann.github.io/Batman/index.html) - "Интенсив по вёрстке | "Бэтмен"" 
 
-[Практика](https://serglehmann.github.io/myProject/index.html) - "Подключение шрифтов. Верстка первого экрана."  
+[Практика](https://serglehmann.github.io/myProject/index.html) - "Подключение шрифтов. Верстка первого экрана. Эффекты при наведении и адаптив первого экрана"  
 
 [Практика](https://serglehmann.github.io/project_m5_u15/index.html) - "Псевдоклассы и псевдоэлементы."
 
