@@ -15,7 +15,11 @@
 html {
   font-size: 10px;
 }
+.wrap-block {
+  text-align: right;
+}
 button {
+  margin: 0;
   background-color: #ffb200;
   color: #ffffff;
   padding: 1rem 3rem;
@@ -38,6 +42,10 @@ button {
   height: 7rem;
   line-height: 7rem;
 }
+.phone-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
 .wrap {
   display: table;
   width: 100%;
@@ -48,7 +56,7 @@ button {
   vertical-align: middle;
 }
 section {
-  padding: 10rem 0;
+  padding: 2rem 0;
 }
 .main {
   padding: 3rem 0;
@@ -135,4 +143,182 @@ section {
   font-size: 1.2rem;
   text-align: left;
   margin: 3.5rem 3rem;
+}
+@media (max-width: 991px) {
+  .main {
+    background-position: top right;
+    background-size: cover;
+  }
+  .main-content {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .btn-header {
+    padding: 0 3rem;
+    color: #ffb200;
+    position: relative;
+  }
+  .btn-header:before {
+    content: 'Консультация';
+    position: absolute;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .header .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .col-12 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .header .phone-link {
+    font-size: 1.8rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: left;
+  }
+  .header .wrap {
+    height: 6rem;
+  }
+  .header .logo {
+    margin-top: 2.2rem;
+  }
+  .main {
+    padding: 0;
+    background-position: top left;
+    background-position-y: 6rem;
+    background-size: cover;
+  }
+  .btn-header {
+    padding: 1rem 3rem;
+    color: #ffb200;
+    position: relative;
+  }
+  .btn-header:before {
+    content: 'Консультация';
+    position: absolute;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 0;
+  }
+}
+@media (max-width: 575px) {
+  .header {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .header .col-6 {
+    padding: 12px auto;
+  }
+  .header .col-12 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .header .phone-link {
+    font-size: 1.4rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    height: 6rem;
+    line-height: 6rem;
+  }
+  .header .wrap {
+    height: 6rem;
+  }
+  .header .logo {
+    margin-top: 2.2rem;
+  }
+  .main {
+    padding: 0;
+    background-position: top left;
+    background-position-y: 6rem;
+    background-size: cover;
+  }
+  .main-title h1 {
+    font-size: 2.2rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  .main-title span {
+    margin-top: 3rem;
+  }
+  .main-subtitle {
+    margin-top: 3rem;
+  }
+  .main-trigger {
+    margin-top: 2.3rem;
+    margin-bottom: 2.3rem;
+  }
+  .main-form {
+    padding: 2.5rem;
+  }
+  .main-bottomtitle {
+    margin: 2.3rem 3rem;
+  }
+  .main-content {
+    margin-top: 4.6rem;
+  }
+  .phone-link {
+    font-size: 1.4rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+  }
+  .btn-header {
+    padding: 0 0;
+    color: #ffb200;
+    position: relative;
+    height: 3.6rem;
+  }
+  .btn-header:before {
+    content: 'Консультация';
+    position: absolute;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 0;
+  }
 }
