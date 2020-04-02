@@ -27,4 +27,7 @@ Glo Academy - Домашние задания
 
 [Практика](https://serglehmann.github.io/project_m5_u15/index.html) - "Псевдоклассы и псевдоэлементы."
 
+
+[Практика](https://serglehmann.github.io/slider/index.html) - "Слайдер на сайте."
+
   
