@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="header">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 offset-sm-0 col-12">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="ГИПСОЛИТ штукатурка стен">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 offset-xl-3 col-lg-3 offset-lg-2 col-md-4 offset-md-1 col-sm-6 col-6">
+                        <a class="phone-link" href="#">+7 495 771 05 08</a>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                        <div class="wrap">
+                            <div class="wrap-block">
+                                <button class="button btn-header">Получить консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-12 offset-0">
+                        <div class="main-title">
+                            <h1>Автоматизированная штукатурка стен</h1>
+                            <p class="main-subtitle">Идеально ровные стены<br>в кратчайшие сроки</p>
+                            <span>Стоймость работ<br>от <strong>300 </strong>руб/м<sup>2</sup></span>
+                            <strong class="main-trigger">Оплата по факту!</strong>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
+                        <div class="main-form">
+                            <h2 class="main-form-header">Для расчета точной стоймости<br>закажите выезд замерщика</h2>
+                            <form action="mail.php">
+                                <label for="#">Ваше имя</label>
+                                <input type="text" class="main-form-input" name="user_name" placeholder="Например, Иван">
+                                <label for="#">Номер телефона</label>
+                                <input type="text" class="main-form-input" name="user_phone" placeholder="+7 (999) 99 99 999">
+                                <button type="submit" class="button main-form-btn">Оставте заявку</button>
+                                <small>Подарок в день обращения*</small>
+                            </form>
+                        </div>
+                        <span class="main-bottomtitle">* - выезды на замер осуществляются <br>в рабоче дни Пн-Пт с 9:00 до 18:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="features">
+        <div class="container">
+            <h2 class="section-header">
+                Преимущества работы с нами
+            </h2>
+            <div class="features-slider">
+                <div class="features-block">
+                    <div class="features-img">
+                        <picture>
+                            <source srcset="img/features/coin.svg" type="image">
+                            <img src="img/features/coin.png" alt="Платите по факту">
+                        </picture>
+                    </div>
+                    <h3>Платите по факту</h3>
+                    <p>Вы оплачиваете выполненные работы только после их выполнения. <br>Никаких скрытых доплат и промежуточных платежей.</p>                    
+                </div>
+                <div class="features-block">
+                    <div class="features-img">
+                        <picture>
+                            <source srcset="img/features/folder.svg" type="image">
+                            <img src="img/features/folder.png" alt="Заключаем договор">
+                        </picture>
+                        </div>
+                        <h3>Заключаем договор</h3>
+                        <p>Перед началом работ заключаем договор на юридическое лицо. <br>Вы можете быть уверены, что все обязательства будут выполнены.</p>
+                </div>
+                <div class="features-block">
+                    <div class="features-img">
+                        <picture>
+                            <source srcset="img/features/clock.svg" type="image">
+                            <img src="img/features/clock.png" alt="Точно в срок">
+                        </picture>
+                        </div>
+                        <h3>Точно в срок</h3>
+                        <p>Работаем строго по установленным срокам, которые прописаны в договоре. <br>Если не успеваем, Вы платите меньше</p>
+                </div>
+                <div class="features-block">
+                    <div class="features-img">
+                        <picture>
+                            <source srcset="img/features/piggy-bank.svg" type="image">
+                            <img src="img/features/piggy-bank.png" alt="Экономьте на материалах">
+                        </picture>
+                        </div>
+                        <h3>Экономьте на материалах</h3>
+                        <p>Мы являемся структурным подразделением компании поставщика строительных смесей gicema.ru и даём Вам самые выгодные цены.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="slick/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css">
+<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.features-slider').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                        prevArrow: '<button class="prev arrow"></button>',
+                        nextArrow: '<button class="next arrow"></button>',
+                        slidesToScroll: 2                       
+                    }
+                },
+                {
+                    breakpoint: 767,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        prevArrow: '<button class="prev arrow"></button>',
+                        nextArrow: '<button class="next arrow"></button>'
+                    }
+                }                
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+            ]
+        });
+    });
+</script>
+
+</body>
+
+</html>
