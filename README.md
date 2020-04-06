@@ -32,4 +32,7 @@ Glo Academy - Домашние задания
 
 [Практика](https://serglehmann.github.io/myProject_2/index.html) - "Верстка блока с преимуществами. Слайдер."
 
+[Практика](https://serglehmann.github.io/myProject_3/index.html) - "Верстка всплывающих окон на сайте."
+
+
   
