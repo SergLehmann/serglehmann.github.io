@@ -34,5 +34,9 @@ Glo Academy - Домашние задания
 
 [Практика](https://serglehmann.github.io/myProject_3/index.html) - "Верстка всплывающих окон на сайте."
 
+[Практика](serglehmann.github.io/project_m5_u18/Accordeon/index.html) - "Табы на сайте."
+
+[Практика](serglehmann.github.io/project_m5_u18/RegForm/index.html) - "Aккордеон на сайте."
+
 
   
