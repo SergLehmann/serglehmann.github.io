@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Табы и аккордеон на сайте.</title>
+    
+    
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style1.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet" type="text/css" media="all"> </head>
+
+<body>    
+    <div class="container">
+       
+        <div class="tabs-box">           
+            <ul class="tabs">
+                <li class="active" rel="tab1">Вход</li>
+                <li rel="tab2">Регистрация</li>                
+            </ul>
+            
+            <div class="tab_container">
+               
+                
+                
+                <div id="tab1" class="tab_content" style="display: block;">                    
+                    <form action="#" class="form">
+                        <input type="text" class="form-input" placeholder="Ваше имя">
+                        <input type="text" class="form-input" placeholder="Пароль">
+                        <a href="#" class="form-link">Забыли пароль?</a>
+                        <div class="form-checkbox">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember">Напомнить мне</label>
+                        </div>
+                        <button class="form-btn">Войти</button>
+                    </form>
+                </div>
+                
+               
+                <div id="tab2" class="tab_content" style="display: none;">
+                    <form action="#" class="form">
+                        <input type="text" class="form-input" placeholder="Ваше имя">
+                        <input type="text" class="form-input" placeholder="Пароль">
+                        <a href="#" class="form-link">Уже зарегистрированы?</a>
+                        <div class="form-checkbox">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember">Сохранить пароль</label>
+                        </div>
+                        <button class="form-btn">Зарегистрироваться</button>
+                    </form>
+                </div>
+                
+                
+                
+            </div>
+            
+        </div>
+       
+    </div>
+    
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        
+        $(".tab_content").hide();
+        $(".tab_content:first").show();
+        
+        $("ul.tabs li").click(function () {
+            $(".tab_content").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+            $("ul.tabs li").removeClass("active");
+            $(this).addClass("active");
+            $(".tab_accordion").removeClass("d_active");
+            $(".tab_accordion[rel^='" + activeTab + "']").addClass("d_active");
+        });
+        
+        $('ul.tabs li').last().addClass("tab_last");
+    </script>
+    
+</body>
+
+</html>
