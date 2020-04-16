@@ -1,0 +1,538 @@
+@font-face {
+  font-family: 'ProximaNova_bold';
+  src: url('../fonts/.eot');
+  src: url('../fonts/.eot?#iefix') format('embedded-opentype'), url('../fonts/.woff2') format('woff2'), url('../fonts/.woff') format('woff'), url('../fonts/.ttf') format('truetype'), url('../fonts/.svg#ProximaNova-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova_reg';
+  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.woff2') format('woff2'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+.wrap-block {
+  text-align: right;
+}
+button {
+  margin: 0;
+  background-color: #ffb200;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #e6a000;
+}
+.header {
+  height: 7rem;
+}
+.phone-link {
+  display: block;
+  color: #252525;
+  font-size: 2rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-align: right;
+  height: 7rem;
+  line-height: 7rem;
+}
+.phone-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.wrap {
+  display: table;
+  width: 100%;
+  height: 7rem;
+}
+.wrap-block {
+  display: table-cell;
+  vertical-align: middle;
+}
+section {
+  padding: 2rem 0;
+}
+.main {
+  padding: 3rem 0;
+  background-image: url(../img/main-bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.main-content {
+  margin-top: 10rem;
+}
+.main-title h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.main-title span {
+  display: inline-block;
+  text-align: center;
+  margin-top: 6rem;
+  padding: 2rem 4rem;
+  background-color: #00c939;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+.main-title span strong {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.main-subtitle {
+  margin-top: 5rem;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.main-trigger {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.main-form {
+  padding: 5rem;
+  background-color: #fff;
+  text-align: center;
+}
+.main-form-header {
+  font-size: 1.7rem;
+  margin-bottom: 3.8rem;
+}
+.main-form label {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.main-form-input {
+  display: block;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+.main-form-btn {
+  width: 100%;
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+.main-form small {
+  font-size: 1.2rem;
+}
+.main-bottomtitle {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 3.5rem 3rem;
+}
+section {
+  padding: 7rem;
+}
+.section-header {
+  text-align: center;
+  margin: 2rem 0 10rem;
+}
+.section-header_light {
+  color: #ffffff;
+  margin-top: 0;
+}
+.section-header h2 {
+  font-size: 3.6rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.section-header p {
+  font-size: 1.4rem;
+}
+.features-block {
+  text-align: center;
+}
+.features-block h3 {
+  font-size: 2rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 3rem;
+}
+.features-block p {
+  display: inline-block;
+  width: 80%;
+  font-size: 1.4rem;
+}
+.features-img {
+  height: 6rem;
+  margin-bottom: 6.5rem;
+}
+.features-img img {
+  display: block;
+  margin: 0 auto;
+}
+.slick-active {
+  outline: none;
+}
+.arrow {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  z-index: 99;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+}
+.prev {
+  left: -5rem;
+  background: url(../img/leftArrow.png) center no-repeat;
+  background-size: 20%;
+}
+.next {
+  right: -5rem;
+  background: url(../img/rightArrow.png) center no-repeat;
+  background-size: 20%;
+}
+.price {
+  background: #00c939 url(../img/prices/prices-bg.png) center;
+}
+.price-header-btn {
+  margin-top: 2rem;
+}
+.price-block {
+  padding: 1rem 3rem;
+  min-height: 60rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+          box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+  text-align: center;
+}
+.price-block h4 {
+  margin: 3rem 0;
+  font-size: 1.8rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.price-block img {
+  width: 100%;
+  max-width: 30rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.price-button {
+  text-align: right;
+}
+.price-tag {
+  display: block;
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+.price-list {
+  padding: 0;
+  list-style: none;
+  min-height: 15rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.price-list li:before {
+  content: '';
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  vertical-align: middle;
+  background: url(../img/cheked.png) no-repeat center;
+  background-size: 100%;
+  margin-right: 1rem;
+}
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 4rem 6rem;
+}
+.popup-form {
+  margin-top: 3rem;
+  padding: 0;
+}
+.popup-close {
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  width: 2rem;
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  font-size: 3rem;
+  color: #ffffff;
+}
+.popup-close:hover {
+  background-color: transparent;
+}
+.popup-content {
+  text-align: center;
+}
+.popup-header {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+@media (max-width: 1199px) {
+  .price-button {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .price-header-btn {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .price-block {
+    margin-bottom: 2rem;
+  }
+  .section-header_light {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 991px) {
+  .main {
+    background-position: top right;
+    background-size: cover;
+  }
+  .main-content {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .btn-header {
+    padding: 0 3rem;
+    color: #ffb200;
+    position: relative;
+  }
+  .btn-header:before {
+    content: 'Консультация';
+    position: absolute;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .price-button {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .price-header-btn {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .price-block {
+    margin-bottom: 2rem;
+  }
+  .section-header_light {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .header .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .col-12 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .header .phone-link {
+    font-size: 1.8rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: left;
+  }
+  .header .wrap {
+    height: 6rem;
+  }
+  .header .logo {
+    margin-top: 2.2rem;
+  }
+  .main {
+    padding: 0;
+    background-position: top left;
+    background-position-y: 6rem;
+    background-size: cover;
+  }
+  .btn-header {
+    padding: 1rem 3rem;
+    color: #ffb200;
+    position: relative;
+  }
+  .btn-header:before {
+    content: 'Консультация';
+    position: absolute;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 0;
+  }
+}
+@media (max-width: 575px) {
+  .price {
+    padding: 2rem 1rem;
+  }
+  .header {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .header .col-6 {
+    padding: 12px auto;
+  }
+  .header .col-12 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .header .phone-link {
+    font-size: 1.4rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    height: 6rem;
+    line-height: 6rem;
+  }
+  .header .wrap {
+    height: 6rem;
+  }
+  .header .logo {
+    margin-top: 2.2rem;
+  }
+  .main {
+    padding: 0;
+    background-position: top left;
+    background-position-y: 6rem;
+    background-size: cover;
+  }
+  .main-title h1 {
+    font-size: 2.2rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  .main-title span {
+    margin-top: 3rem;
+  }
+  .main-subtitle {
+    margin-top: 3rem;
+  }
+  .main-trigger {
+    margin-top: 2.3rem;
+    margin-bottom: 2.3rem;
+  }
+  .main-form {
+    padding: 2.5rem;
+  }
+  .main-bottomtitle {
+    margin: 2.3rem 3rem;
+  }
+  .main-content {
+    margin-top: 4.6rem;
+  }
+  .phone-link {
+    font-size: 1.4rem;
+    font-family: 'ProximaNova_bold', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+  }
+  .btn-header {
+    padding: 0 0;
+    color: #ffb200;
+    position: relative;
+    height: 3.6rem;
+  }
+  .btn-header:before {
+    content: 'Консультация';
+    position: absolute;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 0;
+  }
+}
