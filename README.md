@@ -38,5 +38,7 @@ Glo Academy - Домашние задания
 
 [Практика](https://serglehmann.github.io/project_m5_u18/RegForm/index.html) - "Aккордеон на сайте."
 
+[Практика](https://serglehmann.github.io/myProject_5/index.html) - "Верстка блока с отзывами."
+
 
   
