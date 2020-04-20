@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Табы и аккордеон на сайте.</title>
     
-    
+    <link rel="stylesheet" href="./css/animate.css">
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style1.css">
     
@@ -17,7 +17,7 @@
 <body>    
     <div class="container">
        
-        <div class="tabs-box">           
+        <div class="tabs-box animated wow flipInY">           
             <ul class="tabs">
                 <li class="active" rel="tab1">Вход</li>
                 <li rel="tab2">Регистрация</li>                
@@ -29,14 +29,14 @@
                 
                 <div id="tab1" class="tab_content" style="display: block;">                    
                     <form action="#" class="form">
-                        <input type="text" class="form-input" placeholder="Ваше имя">
-                        <input type="text" class="form-input" placeholder="Пароль">
+                        <input type="text" class="form-input animated wow flipInX" data-wow-duration="3s" placeholder="Ваше имя">
+                        <input type="text" class="form-input animated wow flipInX" data-wow-duration="5s" placeholder="Пароль">
                         <a href="#" class="form-link">Забыли пароль?</a>
                         <div class="form-checkbox">
                             <input type="checkbox" name="remember" id="remember">
                             <label for="remember">Напомнить мне</label>
                         </div>
-                        <button class="form-btn">Войти</button>
+                        <button class="form-btn animated wow rollIn" data-wow-delay="3s">Войти</button>
                     </form>
                 </div>
                 
@@ -80,8 +80,9 @@
         });
         
         $('ul.tabs li').last().addClass("tab_last");
-    </script>
-    
+    </script>    
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
