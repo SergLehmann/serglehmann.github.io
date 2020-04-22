@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 .section {
-    min-height: 100vh;
+    min-height: 200vh;
     text-align: center;
     width: 100%;
     display: table;   
