@@ -1,20 +1,21 @@
 * {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 body {
-    margin: 0;
+  margin: 0;
 }
 .section {
-    min-height: 100vh;
-    text-align: center;
-    width: 100%;
-    display: table;   
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+  display: table;
 }
 .wrap-block {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 h1 {
-    color: #fff;
-    font-size: 48px;
+  color: #fff;
+  font-size: 48px;
 }
