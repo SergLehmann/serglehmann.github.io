@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const firebaseConfig = {
             apiKey: "AIzaSyCRtathsXiX2GTeBfY_ATpEktO_eJeEJdA",
             authDomain: "qwiz-burger.firebaseapp.com",
-            databaseURL: "https:/qwiz-burger.firebaseio.com",
+            databaseURL: "https://qwiz-burger.firebaseio.com",
             projectId: "qwiz-burger",
             storageBucket: "qwiz-burger.appspot.com",
             messagingSenderId: "150485078300",
