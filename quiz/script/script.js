@@ -12,14 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerBtn.style.display = 'none';
 
         const firebaseConfig = {
-            apiKey: "AIzaSyCRtathsXiX2GTeBfY_ATpEktO_eJeEJdA",
-            authDomain: "qwiz-burger.firebaseapp.com",
-            databaseURL: "https://qwiz-burger.firebaseio.com",
-            projectId: "qwiz-burger",
-            storageBucket: "qwiz-burger.appspot.com",
-            messagingSenderId: "150485078300",
-            appId: "1:150485078300:web:5a0b6221dc9d0866d26ad9",
-            measurementId: "G-Y2QVTX3CER"
+            apiKey: "AIzaSyDC7Hq0LTChH9Pmi33mDDSHRoasRJEQ5W0",
+                apiKey: "AIzaSyCRtathsXiX2GTeBfY_ATpEktO_eJeEJdA",
+                    authDomain: "qwiz-burger.firebaseapp.com",
+                    databaseURL: "https://qwiz-burger.firebaseio.com",
+                    projectId: "qwiz-burger",
+                    storageBucket: "qwiz-burger.appspot.com",
+                    messagingSenderId: "150485078300",
+                    appId: "1:150485078300:web:5a0b6221dc9d0866d26ad9",
+                    measurementId: "G-Y2QVTX3CER"
+
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     .ref()
                     .child('questions')
                     .once('value')
-                    .then(snap => playTest(snap.value()));
+                    .then(snap => playTest(snap.val()));
             }, 500);
             
         };    
