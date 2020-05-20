@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerBtn = document.getElementById('burger'),
         nextButton = document.querySelector('#next'),
         prevButton = document.querySelector('#prev'),
-        sendButton = document.querySelector('#send');
+        sendButton = document.querySelector('#send'),
+        modalTitle = document.querySelector('.modal-title');
         burgerBtn.style.display = 'none';
 
         const firebaseConfig = {
@@ -61,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const playTest = (questions) => {
         const finalAnswers = [];
+        const obj = {};
+
         let numberQuestion = 0;
         const renderAnswers = (index) => {
             questions[index].answers.forEach((answer) => {
@@ -94,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //     nextButton.classList.add('d-none');
             // }
             if (numberQuestion === questions.length) {
+                questionTitle.textContent = '';
+                modalTitle.textContent = '';
                 nextButton.classList.add('d-none');
                 prevButton.classList.add('d-none');
                 sendButton.classList.remove('d-none');
@@ -104,10 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         <input type="phone" class="form-control" id="numberPhone">
                     </div>
                 `;
+                const numberPhone = document.getElementById('numberPhone');
+                numberPhone.addEventListener('input', (event) => {
+                    event.target.value = event.target.value.replace(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/, '');
+                });
             } 
             
             if (numberQuestion === questions.length +1) {
                 formAnswers.textContent = 'Спасибо за пройденный тест!';
+                sendButton.classList.add('d-none');
+                for(let key in obj) {
+                    let newObj = {};
+                    newObj[key] = obj[key];
+                    finalAnswers.push(newObj);
+                }
                 setTimeout(() => {
                     modalBlock.classList.remove('d-block');
                 }, 2000);
@@ -118,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderQuestions(numberQuestion);   
         
         const checkAnswer = ()=> {
-            const obj = {};
+            
             const inputs = [...formAnswers.elements].filter((input) => input.checked || input.id === 'numberPhone');
             inputs.forEach((input, index) => {
                 if (numberQuestion >= 0 && numberQuestion <= questions.length - 1) {
@@ -129,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            finalAnswers.push(obj);
-            console.log(finalAnswers);
+            //finalAnswers.push(obj);
+            
             
         };
 
