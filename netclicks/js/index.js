@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     const IMG_URL = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
-    
 
     const leftMenu = document.querySelector('.left-menu'),
         hamburger = document.querySelector('.hamburger'),
@@ -17,19 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
         modalLink = document.querySelector('.modal__link'),
         searchForm = document.querySelector('.search__form'),
         searchFormInput = document.querySelector('.search__form-input'),
-        tvShowsHead = document.querySelector('.tv-shows__head'); 
+        tvShowsHead = document.querySelector('.tv-shows__head'),
+        preloader = document.querySelector('.preloader'),
+        dropdown = document.querySelectorAll('.dropdown'),
+        posterWrapper = document.querySelector('.poster__wrapper'),
+        modalContent = document.querySelector('.modal__content'),
+        pagination = document.querySelector('.pagination'); 
 
     const loading = document.createElement('div'); //preloader
         loading.className = 'loading';
-
-
 
     const DBService = class {
         constructor() {
             this.SERVER = 'https://api.themoviedb.org/3';
             this.API_KEY = 'b83fb1aa59ca22c9699efc007c7adf0c';
         }
-        getData = async (url) => {
+        getData = async (url) => {           
             const res = await fetch(url);
             if (res.ok) {
                 return res.json();
@@ -47,24 +49,46 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         getSearchResult = query => {
-            return this.getData(`${this.SERVER}/search/tv?api_key=${this.API_KEY}&query=${query}&language=ru-RU`);
+            this.temp = `${this.SERVER}/search/tv?api_key=${this.API_KEY}&query=${query}&language=ru-RU`;
+            return this.getData(this.temp);
         };
+
+        getNextPage = page => {
+            return this.getData(this.temp + '&page=' + page);
+        }
 
         getTvShow = id => {
             return this.getData(this.SERVER + '/tv/' + id +'?api_key=' + this.API_KEY + '&language=ru-RU');
                                 //(`${this.SERVER}/tv/${id}?api_key=${this.API_KEY}&language=ru-RU`);
         };
+
+        getTopRated = () => this.getData(`${this.SERVER}/tv/top_rated?api_key=${this.API_KEY}&language=ru-RU`);
+    
+        getPopular = () => this.getData(`${this.SERVER}/tv/popular?api_key=${this.API_KEY}&language=ru-RU`);
+
+        getToday = () => this.getData(`${this.SERVER}/tv/airing_today?api_key=${this.API_KEY}&language=ru-RU`);
+        
+        getWeek = () => this.getData(`${this.SERVER}/tv/on_the_air?api_key=${this.API_KEY}&language=ru-RU`);
+        
     };
+
+    const dbService = new DBService();
 
     //console.log(new DBService().getSearchResult('Няня'));
 
-
-
-    const renderCard = response => {
+    const renderCard = (response, target) => {
         //console.log(response);
-        if (response.total_results !== 0) {
-            tvShowList.textContent = '';
-            tvShowsHead.textContent = 'Результат поиска: '
+        tvShowList.textContent = '';
+
+        if (!response.total_results) {
+            loading.remove();            
+            tvShowsHead.textContent = 'По Вашему запросу ничего не найдено';
+            tvShowsHead.style.cssText = 'color: red; font-size: 24px';
+            return;
+        }            
+            tvShowsHead.textContent = target ? target.textContent : 'Результат поиска: ';
+            tvShowsHead.style.color = 'black';
+
             response.results.forEach(({ backdrop_path: backdrop,
                                         name: title,
                                         poster_path: poster,
@@ -90,34 +114,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 loading.remove();
                 tvShowList.append(card);
             });
+            pagination.textContent = '';
 
-    } else {
-        loading.remove();
-        tvShowList.textContent = '';
-        tvShowsHead.textContent = 'По Вашему запросу ничего не найдено';
-    }
-}
+            if(!target && response.total_pages > 1) {
+                for (let i = 1; i <= response.total_pages; i++) {
+                    pagination.innerHTML += `<li><a href="#" class="pages">${i}</a></li>`
+                }
+            }
+    };
 
     searchForm.addEventListener('submit', event => {
         event.preventDefault();
         const value = searchFormInput.value.trim();
-        if (value) {
-            tvShows.append(loading);
-            new DBService().getSearchResult(value).then(renderCard);
+        if (value) { 
+            tvShows.append(loading);           
+            dbService.getSearchResult(value).then(renderCard);
         }
         searchFormInput.value = '';
     });
 
+    const closeDropdown = () => {
+        dropdown.forEach(item => {
+            item.classList.remove('active');
+        });
+    };
 
     hamburger.addEventListener('click', () => {
         leftMenu.classList.toggle('openMenu');
         hamburger.classList.toggle('open');
+        closeDropdown();
     });
 
     document.addEventListener('click', event => {  //click body
         if (!event.target.closest('.left-menu')) {
             leftMenu.classList.remove('openMenu');
             hamburger.classList.remove('open');
+            closeDropdown();
         }
     });
 
@@ -130,6 +162,33 @@ document.addEventListener('DOMContentLoaded', () => {
             leftMenu.classList.add('openMenu');
             hamburger.classList.add('open');
         }
+        
+        //leftMenu(no bind)
+        if (target.closest('#top-rated')) {
+             tvShows.append(loading);
+            dbService.getTopRated().then((response) => renderCard(response, target));
+        }
+
+        if (target.closest('#popular')) {
+             tvShows.append(loading);
+            dbService.getPopular().then((response) => renderCard(response, target));
+        }
+
+        if (target.closest('#today')) {
+             tvShows.append(loading);
+            dbService.getToday().then((response) => renderCard(response, target));
+        }
+
+        if (target.closest('#week')) {
+             tvShows.append(loading);
+            dbService.getWeek().then((response) => renderCard(response, target));
+        }
+
+        if(target.closest('#search')) {
+            tvShowList.textContent = '';
+            tvShowsHead.textContent = '';
+        }
+        
     });    
 
     //modal window
@@ -139,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = target.closest('.tv-card');
         if (card) {
             tvShowList.append(loading);
-            new DBService().getTvShow(card.id)
+            dbService.getTvShow(card.id)
                 .then(({ 
                     poster_path: posterPath,
                     name: title,
@@ -148,24 +207,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     overview,
                     homepage }) => {
                 //console.log(data);
-                tvCardImg.src = IMG_URL + posterPath;
-                tvCardImg.alt = title;
-                modalTitle.textContent = title;
-                //genresList.innerHTML = data.genres.reduce((acc, item) => `${acc}<li>${item.name}</li>`, '');
-                genresList.textContent = '';
-                // for (const item of data.genres) {
-                //     genresList.innerHTML += `<li>${item.name}</li>`;
-                // }
-                genres.forEach(item => {
-                    genresList.innerHTML += `<li>${item.name}</li>`;
-                })
-                rating.textContent = voteAverage;
-                description.textContent = overview;
-                modalLink.href = homepage;
+
+                    if(posterPath) {
+                        tvCardImg.src = IMG_URL + posterPath;
+                        tvCardImg.alt = title;
+                        modalContent.style.paddingLeft = '';
+                    } else {
+                        posterWrapper.style.display = 'none';
+                        modalContent.style.paddingLeft = '50px';
+                    }                        
+                        modalTitle.textContent = title;
+                        //genresList.innerHTML = data.genres.reduce((acc, item) => `${acc}<li>${item.name}</li>`, '');
+                        genresList.textContent = '';
+                        // for (const item of data.genres) {
+                        //     genresList.innerHTML += `<li>${item.name}</li>`;
+                        // }
+                        genres.forEach(item => {
+                            genresList.innerHTML += `<li>${item.name}</li>`;
+                        })
+                        rating.textContent = voteAverage;
+                        description.textContent = overview;
+                        modalLink.href = homepage;
             })
             .then(() => {
                 document.body.style.overflow = 'hidden';
                 modal.classList.remove('hide');
+            })
+            .finally(() => {
+                loading.remove();
             })
             
         }
@@ -176,8 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(event.target.closest('.cross') ||
             event.target.classList.contains('modal')) {
             document.body.style.overflow = '';
-            modal.classList.add('hide');
-            loading.remove();
+            modal.classList.add('hide');            
         }        
     });
 
@@ -194,26 +262,12 @@ document.addEventListener('DOMContentLoaded', () => {
     tvShowList.addEventListener('mouseover', changeImage);
     tvShowList.addEventListener('mouseout', changeImage);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    pagination.addEventListener('click', (event) => {
+        //event.preventDefault();
+        const target = event.target;
+        if (target.classList.contains('pages')) {            
+            tvShowList.append(loading);
+            dbService.getNextPage(target.textContent).then(renderCard);
+        }
+    })
 });
